@@ -9,7 +9,7 @@ use pocketmine\Server;
 
 class Main extends PluginBase implements Listener{
 	public function onEnable(){
-		$this->getServer()->registerEvents($this, $this);
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getLogger()->info(TF::GREEN . "TransferPE has been enabled!");
 	}
 	public function onCommand(CommandSender $sender, Command $command, $labels, array $args){
