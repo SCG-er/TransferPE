@@ -18,13 +18,13 @@ class Main extends PluginBase implements Listener{
 			if(isset($args[0]) && isset($args[1]) && isset($args[2])){
 				$player = $this->getServer()->getPlayer($args[0]);
 				$ip = $args[1];
-				$port = $args[0];
+				$port = $args[2];
 				if($player == null){
 					$sender->sendMessage(TF::RED . "That player is not online");
 				} else {
 					$player->sendMessage(TF::GREEN . "You are being transfered to ". $ip .":".$port);
 					$this->transferTo($player, $ip, $port);
-					$sender->sendMessage(Tf:GREEN . "Successfully transfered ".$player->getName()."!");
+					$sender->sendMessage(Tf:GREEN . "Successfully transfered ".$player->getName()." to ".$ip.":".$port);
 				}
 			} else {
 				$sender->sendMessage(TF::RED . "Usage: /transferpe <player> <ip> <port>");
