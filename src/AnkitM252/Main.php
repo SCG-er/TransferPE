@@ -5,7 +5,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\command\{Command,CommandSender};
-use pocketmine\Server;
+use pocketmine\{Server,Player};
 
 class Main extends PluginBase implements Listener{
 	public function onEnable(){
