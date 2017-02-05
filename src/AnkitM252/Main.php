@@ -24,14 +24,14 @@ class Main extends PluginBase implements Listener{
 				} else {
 					$player->sendMessage(TF::GREEN . "You are being transfered to ". $ip .":".$port);
 					$this->transferTo($player, $ip, $port);
-					$sender->sendMessage(Tf:GREEN . "successfully transfered ".$player->getName()."!");
+					$sender->sendMessage(Tf:GREEN . "Successfully transfered ".$player->getName()."!");
 				}
 			} else {
 				$sender->sendMessage(TF::RED . "Usage: /transferpe <player> <ip> <port>");
 			}
 		}
 	}
-	public function transferTo(Player $player, $ip, int $port){
+	public function transferTo(Player $player, $ip, $port){
 		$pk = new TransferPacket();
 		$pk->address = $ip;
 		$pk->port = $port;
